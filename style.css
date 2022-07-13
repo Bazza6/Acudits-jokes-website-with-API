@@ -1,0 +1,9 @@
+body {
+  width: 1200px;
+  margin: auto;
+}
+
+main {
+  border: 1px dotted green;
+  text-align: center;
+}
