@@ -1,6 +1,8 @@
-let jokes = "";
+const reportAcudits = []
+let acudit = "";
 
 const getJoke = async () => {
+    document.querySelectorAll(".puntuacionButtons").forEach(a => a.style.display = "inline");
     try {
         const respuesta = await fetch("https://icanhazdadjoke.com/", {
             headers: {
@@ -11,14 +13,26 @@ const getJoke = async () => {
         //console.log("respuesta: ", respuesta);
 
         const datos = await respuesta.json(); //a que sirve .json() ?
-        joke = datos.joke;
-        document.getElementById("joke").innerHTML = `<cite>"${joke}"</cite>`;
+        acudit = datos.joke;
+        document.getElementById("acudit").innerHTML = `<cite>"${acudit}"</cite>`;
 
         //console.log("datos (respuesta.json()): ", datos);
-        console.log("acudit: ", joke);
+        console.log("acudit: ", acudit);
         //console.log("JSON.stringify(datos): ", JSON.stringify(datos));
 
     } catch (error) {
         console.log(error);
     }
+}
+
+function puntuacion(score) {
+    let report = {
+        joke: acudit,
+        score: score,
+        date: (new Date).toISOString(),
+    }
+    reportAcudits.push(report);
+    document.querySelectorAll(".puntuacionButtons").forEach(a => a.style.display = "none");
+
+    console.table(reportAcudits);
 }

@@ -19,11 +19,15 @@ main {
   opacity: 0.8;
 }
 
-p {
+#acudit {
   padding: 30px;
 }
 
-button {
+.puntuacionButtons {
+  display: none;
+}
+
+#següent {
   background-color: rgb(0, 153, 255);
   border-color: rgb(0, 153, 255);
   color: white;
