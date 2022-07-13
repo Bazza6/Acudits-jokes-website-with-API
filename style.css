@@ -7,6 +7,11 @@ body {
   height: 500px;
   background-size: cover;
 }
+#meteo {
+  padding: 20px;
+  text-shadow: 2px 0 #aaa, -2px 0 #aaa, 0 2px #aaa, 0 -2px #aaa, 1px 1px #aaa,
+    -1px -1px #aaa, 1px -1px #aaa, -1px 1px #aaa;
+}
 
 main {
   text-align: center;
@@ -25,6 +30,8 @@ main {
 
 .puntuacionButtons {
   display: none;
+  border-radius: 100%;
+  padding: 10px;
 }
 
 #següent {
@@ -34,7 +41,7 @@ main {
   padding: 10px 20px;
   border-radius: 8px;
 }
-button:hover {
+#següent:hover {
   background-color: white;
   color: black;
 }
