@@ -12,7 +12,7 @@ const getJoke = async () => {
 
         const datos = await respuesta.json(); //a que sirve .json() ?
         joke = datos.joke;
-        //document.getElementById("contenedor").innerHTML = joke;
+        document.getElementById("joke").innerHTML = `<cite>"${joke}"</cite>`;
 
         //console.log("datos (respuesta.json()): ", datos);
         console.log("acudit: ", joke);

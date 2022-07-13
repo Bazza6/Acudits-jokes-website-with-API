@@ -1,9 +1,36 @@
 body {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
+  background-image: url(./img/sad-smile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  background-size: cover;
 }
 
 main {
-  border: 1px dotted green;
   text-align: center;
+  padding: 20px;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+p {
+  padding: 30px;
+}
+
+button {
+  background-color: rgb(0, 153, 255);
+  border-color: rgb(0, 153, 255);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+button:hover {
+  background-color: white;
+  color: black;
 }
