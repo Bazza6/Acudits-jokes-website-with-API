@@ -1,7 +1,16 @@
 const reportAcudits = []
 let acudit = "";
 
-const getJoke = async () => {
+function getJoke() {
+    random = Math.random();
+    if (random > 0.5) {
+        getAcudit()
+    } else {
+        getChuck()
+    }
+}
+
+const getAcudit = async () => {
     document.querySelectorAll(".puntuacionButtons").forEach(a => a.style.display = "inline");
 
     try {
@@ -13,7 +22,7 @@ const getJoke = async () => {
         // a la linea siguiente. Se puede usar solo con funciones asincronas
         //console.log("respuesta: ", respuesta);
 
-        const datos = await respuesta.json(); //a que sirve .json() ?
+        const datos = await respuesta.json();
         acudit = datos.joke;
         document.getElementById("acudit").innerHTML = `<cite>"${acudit}"</cite>`;
 
@@ -26,7 +35,21 @@ const getJoke = async () => {
     }
 
 }
+const getChuck = async () => {
+    try {
+        const respuesta = await fetch("https://api.chucknorris.io/jokes/random");  //await sirve a decirle que acabe la peticion antes de pasar 
+        // a la linea siguiente. Se puede usar solo con funciones asincronas
+        console.log("respuesta2: ", respuesta);
 
+        const datos = await respuesta.json();
+        chuck = datos.value;
+        document.getElementById("acudit").innerHTML = `<cite>"${chuck}"</cite>`;
+
+    } catch (error) {
+        console.log(error);
+    }
+
+}
 const getMeteo = async () => { // b8bbbf0fe403ed96607907fcfdeb0295
 
     try {
