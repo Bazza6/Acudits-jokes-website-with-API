@@ -10,20 +10,27 @@
 </head>
 
 <body>
-    <h3 id="meteo"></h3>
+
+    <div id="meteoBox">
+        <img id="icono" src="" alt="icono">
+        <span id="meteo"></span>
+    </div>
+
+    <div id="blobSx"></div>
+    <div id="blobDx"></div>
 
     <main>
-        <h1>Preparat per riure?</h1>
-        <p id="acudit"></p>
-        <p>
-            <button class="puntuacionButtons" onclick="puntuacion(1)">:(</button>
-            <button class="puntuacionButtons" onclick="puntuacion(2)">:I</button>
-            <button class="puntuacionButtons" onclick="puntuacion(3)">:)</button>
-        </p>
-        <button id="següent" onclick="getJoke()">següent acudit</button>
+        <div class="centered">
+            <h1>Preparat per riure?</h1>
+            <p id="acudit"></p>
+            <p>
+                <button class="negativeButton" onclick="puntuacion(1)"></button>
+                <button class="neutralButton" onclick="puntuacion(2)"></button>
+                <button class="positiveButton" onclick="puntuacion(3)"></button>
+            </p>
+            <button id="següent" onclick="getJoke()">següent acudit</button>
+        </div>
     </main>
-
-
 
     <script src="./main.js"></script>
 </body>

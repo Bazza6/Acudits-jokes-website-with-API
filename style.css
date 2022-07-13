@@ -1,47 +1,132 @@
 body {
   max-width: 1200px;
+  height: 100vh;
   margin: auto;
-  background-image: url(./img/sad-smile.jpg);
+  background-color: #ffffff;
+  background-image: url(./blob/blob0.svg);
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
-  background-size: cover;
+  background-size: contain;
 }
+
+#blobSx {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-image: url(./blob/blob0.svg);
+  bottom: 10%;
+  left: 10%;
+}
+#blobDx {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-image: url(./blob/blob0.svg);
+  top: 10%;
+  right: 10%;
+}
+
+#icono {
+  width: 60px;
+}
+
+#meteoBox {
+  position: absolute;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
 #meteo {
-  padding: 20px;
-  text-shadow: 2px 0 #aaa, -2px 0 #aaa, 0 2px #aaa, 0 -2px #aaa, 1px 1px #aaa,
-    -1px -1px #aaa, 1px -1px #aaa, -1px 1px #aaa;
+  font-size: 20px;
 }
 
 main {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
-  padding: 20px;
-  width: 75%;
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  opacity: 0.8;
+  height: 100vh;
 }
 
 #acudit {
-  padding: 30px;
+  padding: 20px;
+  max-width: 45%;
+  margin: auto;
 }
 
-.puntuacionButtons {
-  display: none;
-  border-radius: 100%;
-  padding: 10px;
+button {
+  cursor: pointer;
 }
 
 #següent {
-  background-color: rgb(0, 153, 255);
-  border-color: rgb(0, 153, 255);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-#següent:hover {
-  background-color: white;
+  font-size: large;
+  background-color: rgb(255, 247, 0);
+  border-color: rgb(0, 0, 0);
   color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#següent:active {
+  transform: translateY(5px);
+}
+
+.negativeButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(./icon/negative.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.neutralButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(./icon/neutral.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.positiveButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(./icon/positive.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.neutralButton:active,
+.negativeButton:active,
+.positiveButton:active {
+  transform: translateY(5px);
+}
+
+@media only screen and (max-width: 700px), (max-height: 700px) {
+  body {
+    background-size: cover;
+  }
+  #blobSx {
+    display: none;
+  }
+  #blobDx {
+    display: none;
+  }
+  #acudit {
+    max-width: 70%;
+  }
 }
