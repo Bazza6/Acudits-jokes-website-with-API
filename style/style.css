@@ -3,7 +3,7 @@ body {
   height: 100vh;
   margin: auto;
   background-color: #ffffff;
-  background-image: url(./blob/blob0.svg);
+  background-image: url(../blob/blob0.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -13,7 +13,7 @@ body {
   width: 150px;
   height: 150px;
   position: absolute;
-  background-image: url(./blob/blob0.svg);
+  background-image: url(../blob/blob0.svg);
   bottom: 10%;
   left: 10%;
 }
@@ -21,7 +21,7 @@ body {
   width: 150px;
   height: 150px;
   position: absolute;
-  background-image: url(./blob/blob0.svg);
+  background-image: url(../blob/blob0.svg);
   top: 10%;
   right: 10%;
 }
@@ -78,7 +78,7 @@ button {
   height: 60px;
   width: 60px;
   display: none;
-  background: url(./icon/negative.svg);
+  background: url(../icon/negative.svg);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -90,7 +90,7 @@ button {
   height: 60px;
   width: 60px;
   display: none;
-  background: url(./icon/neutral.svg);
+  background: url(../icon/neutral.svg);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -102,7 +102,7 @@ button {
   height: 60px;
   width: 60px;
   display: none;
-  background: url(./icon/positive.svg);
+  background: url(../icon/positive.svg);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
