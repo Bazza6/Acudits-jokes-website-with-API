@@ -1,0 +1,132 @@
+body {
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  background-color: #ffffff;
+  background-image: url(../blob/blob0.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#blobSx {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-image: url(../blob/blob0.svg);
+  bottom: 10%;
+  left: 10%;
+}
+#blobDx {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-image: url(../blob/blob0.svg);
+  top: 10%;
+  right: 10%;
+}
+
+#icono {
+  width: 60px;
+}
+
+#meteoBox {
+  position: absolute;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#meteo {
+  font-size: 20px;
+}
+
+main {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 100vh;
+}
+
+#acudit {
+  padding: 20px;
+  max-width: 45%;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+#següent {
+  font-size: large;
+  background-color: rgb(255, 247, 0);
+  border-color: rgb(0, 0, 0);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#següent:active {
+  transform: translateY(5px);
+}
+
+.negativeButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(../icon/negative.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.neutralButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(../icon/neutral.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.positiveButton {
+  height: 60px;
+  width: 60px;
+  display: none;
+  background: url(../icon/positive.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: 30px;
+  border-radius: 100%;
+}
+
+.neutralButton:active,
+.negativeButton:active,
+.positiveButton:active {
+  transform: translateY(5px);
+}
+
+@media only screen and (max-width: 700px), (max-height: 700px) {
+  body {
+    background-size: cover;
+  }
+  #blobSx {
+    display: none;
+  }
+  #blobDx {
+    display: none;
+  }
+  #acudit {
+    max-width: 70%;
+  }
+}

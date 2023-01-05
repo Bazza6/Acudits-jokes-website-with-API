@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+    <div id="meteoBox">
+        <img id="icono" src="" alt="icono">
+        <span id="meteo"></span>
+    </div>
+
+    <div id="blobSx"></div>
+    <div id="blobDx"></div>
+
+    <main>
+        <div class="centered">
+            <h1>Preparat per riure?</h1>
+            <p id="acudit"></p>
+            <p>
+                <button class="negativeButton" onclick="puntuacion(1)"></button>
+                <button class="neutralButton" onclick="puntuacion(2)"></button>
+                <button class="positiveButton" onclick="puntuacion(3)"></button>
+            </p>
+            <button id="següent" onclick="getJoke()">següent acudit</button>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
